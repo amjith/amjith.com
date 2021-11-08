@@ -1,27 +1,118 @@
 baseurl = "/"
-title = "Core Dump"
-theme = "hugo-creative-portfolio-theme"
-languageCode = "en-us"
+title = "Amjith Ramanujam"
+paginate = 5
+theme = "papermod"
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[minify]
+disableXML = true
+minifyOutput = true
 
 [params]
-  # Style options: default (pink), blue, green, pink, red, sea, violet
-  # Use custom.css for your custom styling
-  style = "default"
-  description = "Tech blog by Amjith"
-  #copyright = "&copy;2016 Your name or company"
-  sidebarAbout = ["Tech blog by Amjith123"]
+env = "production"
+title = "Amjith Ramanujam"
+description = "Personal Site"
+keywords = [ "Blog", "Portfolio" ]
+#images = [ "<link or path of image for opengraph, twitter-cards>" ]
+DateFormat = "Jan 2, 2021"
+defaultTheme = "auto"
+disableThemeToggle = false
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+disableSpecial1stPost = false
+disableScrollToTop = false
+comments = false
+hidemeta = false
+hideSummary = false
+showtoc = false
+tocopen = false
 
-  # Nav links in the side bar
-  [[params.navlinks]]
-  name = "Home"
-  url = "/"
-  home = true
+  #[params.assets]
+  #favicon = "<link / abs url>"
+  #favicon16x16 = "<link / abs url>"
+  #favicon32x32 = "<link / abs url>"
+  #apple_touch_icon = "<link / abs url>"
+  #safari_pinned_tab = "<link / abs url>"
 
-  [[params.navlinks]]
-  name = "Personal Blog"
-  url = "https://blog.amjith.com"
+  [params.label]
+  text = "Home"
+  #icon = "/apple-touch-icon.png"
+  #iconHeight = 35
 
-  [params.social]
-  github        = "https://github.com/amjith"
-  link          = "https://www.dbcli.com"
+  [params.profileMode]
+  enabled = false
+  Title = "I'm Amjith 👋"
+  Content = "Welcome to my site"
 
+    [[params.profileMode.buttons]]
+    name = "Projects"
+    url = "/projects"
+
+    [[params.profileMode.buttons]]
+    name = "Blog"
+    url = "/archives"
+
+  [params.homeInfoParams]
+  Title = "I'm Amjith 👋"
+  Content = "Welcome to my site"
+
+  [[params.socialIcons]]
+  name = "twitter"
+  url = "https://twitter.com/amjithr"
+
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/amjith"
+
+  [params.cover]
+  hidden = true
+  hiddenInList = true
+  hiddenInSingle = true
+
+  [params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1_000
+  threshold = 0.4
+  minMatchCharLength = 0
+  keys = [ "title", "permalink", "summary", "content" ]
+
+[[menu.main]]
+identifier = "projects"
+name = "Projects"
+url = "/projects/"
+weight = 10
+
+[[menu.main]]
+identifier = "archives"
+name = "Archives"
+url = "/archives/"
+weight = 20
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 30
+
+[[menu.main]]
+identifier = "search"
+name = "Search"
+url = "/search/"
+weight = 40
+
+[[menu.main]]
+identifier = "example"
+name = "example.org"
+url = "https://example.org"
+weight = 50
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
